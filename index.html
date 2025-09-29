@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Website</title>
+  <title>あなたの名前 | ポートフォリオ</title>
+  <meta name="description" content="エンジニアのポートフォリオサイト" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hello World!</h1>
+  <header>
+    <h1>あなたの名前</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#works">Works</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" aria-labelledby="hero-title">
+      <h2 id="hero-title">シンプルで速いWebをつくります</h2>
+      <p>フロント〜公開まで対応。小さく作って素早く公開、あとで磨きます。</p>
+      <a class="btn" href="#contact">お問い合わせ</a>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <p>自己紹介テキスト。得意分野やツールを書きます。</p>
+      <ul>
+        <li>得意：静的サイト、LP</li>
+        <li>好き：シンプルなUI、素早い改善</li>
+        <li>学習中：Next.js / Cloudflare Pages</li>
+      </ul>
+    </section>
+
+    <section id="works" aria-labelledby="works-title">
+      <h2 id="works-title">Works</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>制作例タイトル①</h3>
+          <p>課題→施策→結果を一言で。</p>
+          <a class="btn" href="#" target="_blank" rel="noopener">サイトを見る</a>
+        </article>
+        <article class="card">
+          <h3>制作例タイトル②</h3>
+          <p>担当範囲や技術も書くと良い。</p>
+          <a class="btn" href="#" target="_blank" rel="noopener">サイトを見る</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" aria-labelledby="services-title">
+      <h2 id="services-title">Services</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>LP制作</h3>
+          <p>要件→実装→公開まで。最短◯日。</p>
+          <p class="price">¥◯◯,◯◯◯〜</p>
+        </div>
+        <div class="card">
+          <h3>速度改善</h3>
+          <p>画像最適化・不要スクリプト削除・Lighthouse改善。</p>
+          <p class="price">¥◯◯,◯◯◯〜</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>まずはお気軽にご相談ください。</p>
+      <ul>
+        <li>メール：<a href="mailto:you@example.com">you@example.com</a></li>
+        <li>X：<a href="https://x.com/yourid" target="_blank" rel="noopener">@yourid</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <small>© <span id="year"></span> あなたの名前</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
