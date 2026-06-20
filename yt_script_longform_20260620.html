@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COMPASS YouTube長尺広告 台本 | 2026-06-20</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Helvetica Neue', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+      background: #f4f4f0;
+      color: #1a1a1a;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 40px 48px;
+    }
+
+    header .label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    header .meta {
+      font-size: 13px;
+      color: #999;
+    }
+
+    .overview {
+      background: #fff;
+      border-left: 4px solid #1a1a1a;
+      margin: 32px 48px;
+      padding: 24px 28px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .overview h2 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 16px;
+    }
+
+    .structure-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .structure-box {
+      background: #f9f9f7;
+      border: 1px solid #e0e0dc;
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+
+    .structure-box h3 {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .structure-box ul {
+      list-style: none;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .structure-box ul li {
+      padding: 2px 0;
+    }
+
+    .structure-box ul li::before {
+      content: "—  ";
+      color: #bbb;
+    }
+
+    .purpose-box {
+      background: #f9f9f7;
+      border: 1px solid #e0e0dc;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-top: 16px;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .purpose-box strong {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 6px;
+    }
+
+    /* Section */
+    .section {
+      margin: 0 48px 48px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #1a1a1a;
+    }
+
+    .persona-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+
+    .persona-a { background: #1a1a1a; color: #fff; }
+    .persona-b { background: #555; color: #fff; }
+    .common-tag { background: #e8e8e0; color: #1a1a1a; }
+
+    .section-header h2 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .section-header .duration {
+      font-size: 12px;
+      color: #888;
+      margin-left: auto;
+    }
+
+    /* Hook cards */
+    .hooks-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 0;
+    }
+
+    .hook-card {
+      background: #fff;
+      border: 1px solid #e0e0dc;
+      border-radius: 10px;
+      padding: 22px 24px;
+      position: relative;
+    }
+
+    .hook-id {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #bbb;
+      margin-bottom: 6px;
+    }
+
+    .hook-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #f0f0ec;
+    }
+
+    .hook-axis {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+
+    .script-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: #333;
+      background: #fafaf8;
+      border-radius: 6px;
+      padding: 16px 18px;
+      border-left: 3px solid #ddd;
+    }
+
+    .duration-badge {
+      font-size: 11px;
+      color: #aaa;
+      margin-top: 12px;
+      text-align: right;
+    }
+
+    /* Common part */
+    .common-card {
+      background: #fff;
+      border: 1px solid #e0e0dc;
+      border-radius: 10px;
+      padding: 28px 32px;
+    }
+
+    .common-card .common-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+    }
+
+    .common-card .common-sub {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .common-script {
+      font-size: 14px;
+      line-height: 2.0;
+      color: #333;
+      background: #fafaf8;
+      border-radius: 6px;
+      padding: 20px 22px;
+      border-left: 3px solid #1a1a1a;
+    }
+
+    .common-script p {
+      margin-bottom: 14px;
+    }
+
+    .common-script p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Policy check */
+    .policy-section {
+      margin: 0 48px 48px;
+    }
+
+    .policy-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #1a1a1a;
+    }
+
+    .policy-header h2 {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .policy-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #e0e0dc;
+      font-size: 13px;
+    }
+
+    .policy-table th {
+      background: #f4f4f0;
+      padding: 12px 18px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #888;
+      border-bottom: 1px solid #e0e0dc;
+    }
+
+    .policy-table td {
+      padding: 12px 18px;
+      border-bottom: 1px solid #f4f4f0;
+      color: #444;
+    }
+
+    .policy-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .ok { color: #2d7a2d; font-weight: 700; }
+    .ng { color: #c0392b; font-weight: 700; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 32px 48px;
+      font-size: 12px;
+      color: #bbb;
+      border-top: 1px solid #e0e0dc;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 720px) {
+      header, .overview, .section, .policy-section { padding-left: 20px; padding-right: 20px; }
+      .overview { margin: 20px; }
+      .section { margin: 0 20px 40px; }
+      .policy-section { margin: 0 20px 40px; }
+      .hooks-grid { grid-template-columns: 1fr; }
+      .structure-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="label">COMPASS × ビズム / YouTube広告台本</div>
+  <h1>長尺広告 台本（語りスタイル）</h1>
+  <div class="meta">セグメントE 専門職 ／ 作成日：2026-06-20 ／ ver.1.0</div>
+</header>
+
+<!-- 構成概要 -->
+<div class="overview">
+  <h2>構成概要</h2>
+  <div class="structure-grid">
+    <div class="structure-box">
+      <h3>ペルソナA（筋トレ好き）</h3>
+      <ul>
+        <li>A-1：頑張っても給料が変わらない</li>
+        <li>A-2：転職しても構造は変わらない</li>
+        <li>A-3：PTの知識、病院の外でも使える</li>
+        <li>A-4：筋トレ好きなPT、実は武器がある</li>
+        <li>共通パートA（約2分）× 全フック共通</li>
+      </ul>
+    </div>
+    <div class="structure-box">
+      <h3>ペルソナB（筋トレなし）</h3>
+      <ul>
+        <li>B-1：今の仕事は好き。でも将来が不安</li>
+        <li>B-2：臨床の知識、病院の外でも求められてる</li>
+        <li>共通パートB（約2分）× 全フック共通</li>
+      </ul>
+    </div>
+  </div>
+  <div class="purpose-box">
+    <strong>広告の目的</strong>
+    LINE登録を促し、登録後シナリオの3本動画（①年収の天井 ②専門知識を活かす方法 ③病院で働きながら別の道を作った人の実話）への視聴につなぐ。
+  </div>
+</div>
+
+<!-- ペルソナA フック -->
+<div class="section">
+  <div class="section-header">
+    <span class="persona-tag persona-a">Persona A</span>
+    <h2>フック × 4本（筋トレ好き）</h2>
+    <span class="duration">各 10〜15秒</span>
+  </div>
+
+  <div class="hooks-grid">
+
+    <div class="hook-card">
+      <div class="hook-id">A-1</div>
+      <div class="hook-title">頑張っても給料が変わらない</div>
+      <div class="hook-axis">訴求軸：痛み / 収入の天井</div>
+      <div class="script-text">
+        パーソナルトレーナーとして、どれだけ患者さんに向き合っても、どれだけ勉強しても、給料が全然変わらない。固定給だから、何をやっても反映されない。そのもやもや、感じたことありませんか。
+      </div>
+      <div class="duration-badge">約12秒</div>
+    </div>
+
+    <div class="hook-card">
+      <div class="hook-id">A-2</div>
+      <div class="hook-title">転職しても構造は変わらない</div>
+      <div class="hook-axis">訴求軸：詰まり感 / 構造的行き詰まり</div>
+      <div class="script-text">
+        転職サイト見てますか？全部、同じような求人ばかりなんですよね。職場を変えても、診療報酬の中の移動でしかない。年収の構造は、何も変わらないんです。
+      </div>
+      <div class="duration-badge">約13秒</div>
+    </div>
+
+    <div class="hook-card">
+      <div class="hook-id">A-3</div>
+      <div class="hook-title">PTの知識、病院の外でも使える</div>
+      <div class="hook-axis">訴求軸：気づき / 知識の再定義</div>
+      <div class="script-text">
+        パーソナルトレーナーとして学んできた知識、実は病院外でも使えるの知っていますか？病院の外でも、その知識を必要としている人がたくさんいます。
+      </div>
+      <div class="duration-badge">約12秒</div>
+    </div>
+
+    <div class="hook-card">
+      <div class="hook-id">A-4</div>
+      <div class="hook-title">筋トレ好きなPT、実は武器がある</div>
+      <div class="hook-axis">訴求軸：発見 / 強みの気づき</div>
+      <div class="script-text">
+        知ってましたか？筋トレが好きで、体のことも専門で学んでいるPT、実はとんでもない武器を持っているんですよ。実はこれ、ほとんどの人がまだ気づいていないだけなんです。
+      </div>
+      <div class="duration-badge">約10秒</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 共通パートA -->
+<div class="section">
+  <div class="section-header">
+    <span class="persona-tag persona-a">Persona A</span>
+    <span class="persona-tag common-tag">共通パート</span>
+    <h2>共通パートA</h2>
+    <span class="duration">約2分</span>
+  </div>
+
+  <div class="common-card">
+    <div class="common-title">ペルソナA 共通（筋トレ好き × LINE動画誘導）</div>
+    <div class="common-sub">フックA-1〜A-4 すべてに接続</div>
+    <div class="common-script">
+      <p>
+        自分自身も、ずっと同じもやもやを抱えてたんですよ。PTとして働きながら、筋トレも好きで。でも、それをどう繋げればいいのか、全然わからなかった。
+      </p>
+      <p>
+        ある時気づいたんですけど、PTが持ってる解剖学・生理学の知識って、ボディメイクを教える上でめちゃくちゃ強みになるんですよ。なぜ体が変わるのか、どう動かせばいいのか、筋肉に何が起きているのか、根拠を持って説明できる。これって普通のトレーナーにはできないことで、PTには当たり前にできることなんです。
+      </p>
+      <p>
+        しかも自分自身が筋トレで体を変えてきた経験もある。専門知識と自分の経験が重なると、こんなに強みになるんだなって。
+      </p>
+      <p>
+        今の仕事はそのまま続けながら、オンラインで始められる。場所も時間も選ばない。大きなリスクを取る必要もない。
+      </p>
+      <p>
+        今回期間限定で、LINE登録後動画特典をご用意しております。１つはなぜ頑張っても収入が変わらないのか、その構造の話。2つ目は専門知識を病院の外で活かす方法。3つ目は、実際に病院で働きながら別の道を作った人の実話です。
+      </p>
+      <p>
+        勧誘とかは一切なくて、まず動画を見てから自分で判断してもらえればと思います。転職ではなく、新しい道をご紹介してます。
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ペルソナB フック -->
+<div class="section">
+  <div class="section-header">
+    <span class="persona-tag persona-b">Persona B</span>
+    <h2>フック × 2本（筋トレなし）</h2>
+    <span class="duration">各 10〜15秒</span>
+  </div>
+
+  <div class="hooks-grid">
+
+    <div class="hook-card">
+      <div class="hook-id">B-1</div>
+      <div class="hook-title">今の仕事は好き。でも将来が不安</div>
+      <div class="hook-axis">訴求軸：痛み / 収入・将来不安</div>
+      <div class="script-text">
+        仕事は好きなのに、このままでいいのかなって思う瞬間、ありませんか。収入は上がらない、将来も見えない。臨床は好きなのに、どこかモヤモヤしている。
+      </div>
+      <div class="duration-badge">約11秒</div>
+    </div>
+
+    <div class="hook-card">
+      <div class="hook-id">B-2</div>
+      <div class="hook-title">臨床の知識、病院の外でも求められてる</div>
+      <div class="hook-axis">訴求軸：知識の再定義 / 発見</div>
+      <div class="script-text">
+        実は今、臨床で積んできた体の知識が、病院とは全然違う場所で求められていることを知っていますか？
+      </div>
+      <div class="duration-badge">約10秒</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 共通パートB -->
+<div class="section">
+  <div class="section-header">
+    <span class="persona-tag persona-b">Persona B</span>
+    <span class="persona-tag common-tag">共通パート</span>
+    <h2>共通パートB</h2>
+    <span class="duration">約2分</span>
+  </div>
+
+  <div class="common-card">
+    <div class="common-title">ペルソナB 共通（筋トレなし × LINE動画誘導）</div>
+    <div class="common-sub">フックB-1〜B-2 すべてに接続</div>
+    <div class="common-script">
+      <p>
+        自分も、このまま同じ働き方を続けていいのかな、ってずっと考えてたんですよ。仕事は好き。でも収入は上がらない。将来が見えない。そのまま10年経つのかなって。
+      </p>
+      <p>
+        筋トレが得意なわけでも、特別なスキルがあるわけでもない。でも、病院で積んできた臨床の知識って、実は病院の外でも求められてるんですよ。
+      </p>
+      <p>
+        解剖学・運動学をちゃんと理解している。なぜ体が変わるのか説明できる。ダイエットや体作りで悩んでいる人たちは、そういう根拠のある知識を持った人を探してる。筋トレが得意かどうかより、体の仕組みをちゃんと説明できるかどうかの方が、ずっと大事なんですよね。
+      </p>
+      <p>
+        今の仕事を辞めなくていい。オンラインで完結するので、場所も時間も選ばない。
+      </p>
+      <p>
+        今回期間限定で、LINE登録後動画特典をご用意しております。１つはなぜ頑張っても収入が変わらないのか、その構造の話。2つ目は専門知識を病院の外で活かす方法。3つ目は、実際に病院で働きながら別の道を作った人の実話です。
+      </p>
+      <p>
+        勧誘とかは一切なくて、まず動画を見てから自分で判断してもらえればと思います。転職ではなく、新しい道をご紹介してます。
+      </p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  COMPASS セグメントE 専門職 ／ YouTube長尺広告台本 v1.0 ／ 作成：ビズム ／ 2026-06-20
+</footer>
+
+</body>
+</html>
